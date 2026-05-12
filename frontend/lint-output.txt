@@ -1,0 +1,28 @@
+﻿
+> frontend@0.0.0 lint
+> eslint .
+
+
+D:\CareerCompass\frontend\src\layout\Sidebar.jsx
+  50:36  error  'Icon' is defined but never used  no-unused-vars
+
+D:\CareerCompass\frontend\src\pages\Community.jsx
+  22:22  error  'err' is defined but never used  no-unused-vars
+  22:27  error  Empty block statement            no-empty
+  34:22  error  'err' is defined but never used  no-unused-vars
+
+D:\CareerCompass\frontend\src\pages\Dashboard.jsx
+  35:18  error    'err' is defined but never used                                                                                    no-unused-vars
+  42:8   warning  React Hook useEffect has a missing dependency: 'fetchDashboard'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  49:18  error    'err' is defined but never used                                                                                    no-unused-vars
+  58:18  error    'err' is defined but never used                                                                                    no-unused-vars
+
+D:\CareerCompass\frontend\src\pages\Profile.jsx
+  21:22  error  'err' is defined but never used  no-unused-vars
+  42:18  error  'err' is defined but never used  no-unused-vars
+
+D:\CareerCompass\frontend\src\services\api.js
+  35:22  error  'err' is defined but never used  no-unused-vars
+
+Γ£û 11 problems (10 errors, 1 warning)
+

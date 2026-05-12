@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-primary: #5B4BFF;
+  --color-primary-hover: #7A5CFF;
+
+  --color-bg: #F5F6FA;
+  --color-surface: #ffffff;
+
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  --color-success: #10b981;
+  --color-locked: #cbd5e1;
+
+  --radius-lg: 16px;
+
+  --shadow-soft: 0px 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text-main)] font-inter antialiased;
+  }
+}
