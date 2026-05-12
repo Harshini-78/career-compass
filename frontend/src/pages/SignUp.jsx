@@ -53,7 +53,7 @@ const SignUp = () => {
         <div className="min-h-screen bg-[#F8F9FC] flex flex-col items-center justify-center font-inter p-4">
 
             {/* Form Section */}
-            <div className="bg-white w-full max-w-[480px] p-8 sm:p-10 rounded-[12px] shadow-[0px_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col my-8">
+            <div className="bg-white w-full max-w-[480px] p-5 sm:p-10 rounded-[12px] shadow-[0px_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col my-8">
 
                 <h2 className="text-[28px] font-bold text-[#0f172a] mb-1 tracking-tight">Create Account</h2>
                 <p className="text-gray-500 font-medium text-[15px] mb-8">Start tracking your journey to placement readiness</p>

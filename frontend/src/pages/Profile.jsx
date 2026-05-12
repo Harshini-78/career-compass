@@ -174,7 +174,7 @@ const Profile = () => {
     );
 
     return (
-        <div className="p-4 md:p-8 max-w-5xl mx-auto w-full font-inter space-y-6">
+        <div className="max-w-5xl mx-auto w-full font-inter space-y-6">
 
             {error && <div className="p-4 text-red-600 bg-red-50 dark:bg-red-900/20 rounded-xl border border-red-100 dark:border-red-900/50 font-medium">{error}</div>}
             {saveSuccess && <div className="p-4 text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50 font-medium flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-300"><CheckCircle2 size={18} />{saveSuccess}</div>}

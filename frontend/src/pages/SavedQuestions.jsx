@@ -86,7 +86,7 @@ const SavedQuestions = () => {
     }
 
     return (
-        <div className="p-6 md:p-8 max-w-[1000px] mx-auto w-full font-inter pb-12 transition-colors">
+        <div className="max-w-[1200px] mx-auto w-full font-inter pb-12 transition-colors">
             <div className="flex flex-col gap-6 mb-10">
                 <div>
                     <h1 className="text-[36px] font-extrabold text-[#0f172a] dark:text-white mb-1.5 tracking-tight">Saved Questions</h1>
@@ -115,7 +115,7 @@ const SavedQuestions = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {loading ? (
                     <div className="text-center py-12 text-gray-500 font-medium animate-pulse">Loading saved questions...</div>
                 ) : questions.length === 0 ? (

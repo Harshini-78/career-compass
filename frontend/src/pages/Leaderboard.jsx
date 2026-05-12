@@ -143,7 +143,7 @@ const AskSeniors = () => {
     }
 
     return (
-        <div className="p-6 md:p-8 max-w-[1280px] mx-auto w-full font-inter pb-12 transition-colors">
+        <div className="max-w-[1280px] mx-auto w-full font-inter pb-12 transition-colors">
             <div className="flex flex-col lg:flex-row gap-8 items-start">
 
                 {/* Main Content Feed */}

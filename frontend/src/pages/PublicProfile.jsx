@@ -40,7 +40,7 @@ const PublicProfile = () => {
     );
 
     return (
-        <div className="p-4 md:p-8 max-w-5xl mx-auto w-full font-inter space-y-6">
+        <div className="max-w-5xl mx-auto w-full font-inter space-y-6">
             <Button variant="ghost" onClick={() => navigate('/community')} className="mb-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white -ml-2">
                 <ArrowLeft size={16} className="mr-2" /> Back to Community
             </Button>

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { Rocket, Home, Users, MessageSquare, Settings, LogOut, Bookmark } from 'lucide-react';
+import { Rocket, Home, Users, MessageSquare, Settings, LogOut, Bookmark, X } from 'lucide-react';
 import api from '../services/api';
 import { useTheme } from '../context/ThemeContext';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
 
@@ -28,15 +28,28 @@ const Sidebar = () => {
     };
 
     return (
-        <aside className="w-72 bg-white dark:bg-slate-950 border-r border-gray-100 dark:border-slate-800 flex flex-col h-screen shrink-0 font-inter py-8 transition-colors">
-            <div className="px-8 flex items-center mb-10">
-                <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#5B4BFF]/10 dark:bg-[#5B4BFF]/20 flex items-center justify-center">
-                        <Rocket className="text-[#5B4BFF] dark:text-indigo-400" size={24} strokeWidth={2.5} />
+        <>
+            {/* Mobile Overlay */}
+            {isOpen && (
+                <div 
+                    className="fixed inset-0 bg-gray-900/50 dark:bg-black/50 z-40 md:hidden backdrop-blur-sm transition-opacity"
+                    onClick={() => setIsOpen(false)}
+                />
+            )}
+            
+            <aside className={`w-72 bg-white dark:bg-slate-950 border-r border-gray-100 dark:border-slate-800 flex flex-col h-[100dvh] shrink-0 font-inter py-8 transition-transform duration-300 z-50 fixed md:relative ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+                <div className="px-8 flex items-center justify-between mb-10">
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-[#5B4BFF]/10 dark:bg-[#5B4BFF]/20 flex items-center justify-center shrink-0">
+                            <Rocket className="text-[#5B4BFF] dark:text-indigo-400" size={24} strokeWidth={2.5} />
+                        </div>
+                        <span className="font-extrabold text-[24px] text-gray-900 dark:text-white tracking-tight shrink-0">CareerCompass</span>
                     </div>
-                    <span className="font-extrabold text-[24px] text-gray-900 dark:text-white tracking-tight">CareerCompass</span>
+                    {/* Mobile Close Button */}
+                    <button onClick={() => setIsOpen(false)} className="md:hidden p-2 -mr-3 text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors bg-gray-50 dark:bg-slate-900 rounded-lg">
+                        <X size={20} />
+                    </button>
                 </div>
-            </div>
 
             <div className="px-8 mb-10">
                 <div className="flex flex-col gap-1 bg-gray-50 dark:bg-slate-900/50 p-4 rounded-2xl border border-gray-100 dark:border-slate-800/60">
@@ -68,6 +81,7 @@ const Sidebar = () => {
                     <NavLink
                         key={to}
                         to={to}
+                        onClick={() => setIsOpen(false)}
                         className={({ isActive }) =>
                             `flex items-center gap-3.5 px-4 py-3.5 rounded-2xl text-[15px] font-semibold transition-all relative group ${isActive
                                 ? 'text-[#5B4BFF] dark:text-indigo-400 bg-[#5B4BFF]/5 dark:bg-indigo-500/10'
@@ -98,6 +112,7 @@ const Sidebar = () => {
                 </button>
             </div>
         </aside>
+        </>
     );
 };
 

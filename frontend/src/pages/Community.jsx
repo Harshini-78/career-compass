@@ -88,7 +88,7 @@ const Community = () => {
     };
 
     return (
-        <div className="p-6 md:p-8 max-w-[1200px] mx-auto w-full font-inter pb-12 transition-colors">
+        <div className="max-w-[1200px] mx-auto w-full font-inter pb-12 transition-colors">
             <div className="mb-8">
                 <h1 className="text-[36px] font-extrabold text-[#0f172a] dark:text-white mb-1.5 tracking-tight">Community Feed</h1>
                 <p className="text-gray-500 dark:text-gray-400 text-[16px] font-medium">See how others are progressing and collaborate together</p>
@@ -113,7 +113,7 @@ const Community = () => {
             {activeTab === 'forum' && (
                 <div className="mb-8 flex justify-end">
                     <select
-                        className="bg-white border border-[#e2e8f0] text-gray-900 text-[14px] font-medium rounded-xl focus:ring-2 focus:ring-[#5B4BFF]/20 focus:border-[#5B4BFF] block p-3 pr-8 appearance-none cursor-pointer shadow-sm w-[250px]"
+                        className="bg-white border border-[#e2e8f0] text-gray-900 text-[14px] font-medium rounded-xl focus:ring-2 focus:ring-[#5B4BFF]/20 focus:border-[#5B4BFF] block p-3 pr-8 appearance-none cursor-pointer shadow-sm w-full sm:w-[250px]"
                         value={domainFilter}
                         onChange={(e) => setDomainFilter(e.target.value)}
                     >
@@ -137,7 +137,7 @@ const Community = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col md:flex-row gap-4 items-end">
+                        <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-end">
                             <div className="w-full md:w-auto flex-1 min-w-[200px]">
                                 <label className="block text-[13px] font-bold text-gray-500 mb-1.5 ml-1">Domain</label>
                                 <select

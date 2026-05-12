@@ -157,7 +157,7 @@ const Dashboard = () => {
 
                 {/* Impact Overview */}
                 <h2 className="text-[15px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4">Impact Overview</h2>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
                     <div className="bg-white dark:bg-slate-900 rounded-[16px] shadow-[0px_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 dark:border-slate-800 p-6 relative overflow-hidden group hover:border-[#5B4BFF]/30 dark:hover:border-[#5B4BFF]/50 transition-all">
                         <div className="absolute top-0 right-0 w-24 h-24 bg-[#5B4BFF]/5 dark:bg-[#5B4BFF]/10 rounded-bl-[100px] -z-10 group-hover:bg-[#5B4BFF]/10 dark:group-hover:bg-[#5B4BFF]/20 transition-colors"></div>
                         <div className="w-10 h-10 rounded-[10px] bg-[#EEF2FF] dark:bg-indigo-900/40 text-[#5B4BFF] dark:text-indigo-400 flex items-center justify-center mb-4">
@@ -221,7 +221,7 @@ const Dashboard = () => {
                                         <p className="text-gray-600 dark:text-gray-300 text-[15px] leading-relaxed mb-5 line-clamp-2">
                                             {q.content}
                                         </p>
-                                        <div className="flex justify-between items-center mt-auto border-t border-gray-100 dark:border-slate-800 pt-4">
+                                        <div className="flex flex-col sm:flex-row justify-between sm:items-center mt-auto border-t border-gray-100 dark:border-slate-800 pt-4 gap-4">
                                             <div className="flex items-center gap-2">
                                                 <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-indigo-100 to-purple-100 dark:from-indigo-600 dark:to-purple-600 flex items-center justify-center text-[10px] font-bold text-indigo-700 dark:text-white">
                                                     {q.is_anonymous ? 'A' : q.author_name.charAt(0).toUpperCase()}
@@ -232,7 +232,7 @@ const Dashboard = () => {
                                             </div>
                                             <button
                                                 onClick={() => setReplyingTo(replyingTo === q.id ? null : q.id)}
-                                                className="bg-[#0f172a] dark:bg-slate-800 hover:bg-[#1e293b] dark:hover:bg-slate-700 text-white text-[13px] font-semibold py-2 px-4 rounded-[8px] transition-colors"
+                                                className="bg-[#0f172a] dark:bg-slate-800 hover:bg-[#1e293b] dark:hover:bg-slate-700 text-white text-[13px] font-semibold py-2 px-4 rounded-[8px] transition-colors w-full sm:w-auto text-center"
                                             >
                                                 {replyingTo === q.id ? 'Cancel' : 'Write Answer'}
                                             </button>
@@ -340,7 +340,7 @@ const Dashboard = () => {
                         />
                     </div>
 
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-2">
                         <StatCard title="Completed" value={data.completed_stages} label="Completed" isPrimary={false} />
                         <StatCard title="In Progress" value={data.unlocked_stages - data.completed_stages} label="In Progress" isPrimary={true} />
                         <StatCard title="Remaining" value={data.remaining_stages} label="Remaining" isPrimary={false} />

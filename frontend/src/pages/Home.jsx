@@ -9,21 +9,21 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-white flex flex-col font-inter">
             {/* Header */}
-            <header className="flex justify-between items-center px-8 py-5 border-b border-[#e2e8f0]">
+            <header className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-between items-center px-4 sm:px-8 py-5 border-b border-[#e2e8f0] gap-4">
                 <div className="flex items-center gap-2">
-                    <Rocket className="text-[#5B4BFF]" size={28} />
-                    <span className="font-extrabold text-2xl text-gray-900 tracking-tight">CareerCompass</span>
+                    <Rocket className="text-[#5B4BFF]" size={24} />
+                    <span className="font-extrabold text-xl sm:text-2xl text-gray-900 tracking-tight">CareerCompass</span>
                 </div>
                 <div className="flex gap-4">
                     <button
                         onClick={() => navigate('/login')}
-                        className="px-6 py-2.5 rounded-[8px] font-medium text-gray-700 bg-white border border-[#e2e8f0] hover:bg-gray-50 transition-colors"
+                        className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-[8px] font-medium text-sm sm:text-base text-gray-700 bg-white border border-[#e2e8f0] hover:bg-gray-50 transition-colors"
                     >
                         Login
                     </button>
                     <button
                         onClick={() => navigate('/signup')}
-                        className="px-6 py-2.5 rounded-[8px] font-medium text-white bg-[#5B4BFF] hover:bg-[#4939ff] transition-colors shadow-sm"
+                        className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-[8px] font-medium text-sm sm:text-base text-white bg-[#5B4BFF] hover:bg-[#4939ff] transition-colors shadow-sm"
                     >
                         Sign Up
                     </button>
@@ -32,24 +32,24 @@ const Home = () => {
 
             <main className="flex-1 w-full">
                 {/* Hero Section */}
-                <section className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between px-8 py-20 gap-16">
+                <section className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 py-12 md:py-20 gap-10 lg:gap-16">
                     {/* Text Content */}
-                    <div className="flex-1 max-w-xl">
-                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#5B4BFF]/10 text-[#5B4BFF] text-sm font-semibold mb-8">
+                    <div className="flex-1 max-w-xl text-center lg:text-left">
+                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#5B4BFF]/10 text-[#5B4BFF] text-xs sm:text-sm font-semibold mb-6 md:mb-8">
                             Your Journey to Placement Success
                         </div>
 
-                        <h1 className="text-[3.5rem] leading-[1.1] font-extrabold text-[#0f172a] mb-6 tracking-tight">
+                        <h1 className="text-4xl md:text-[3.5rem] leading-[1.1] font-extrabold text-[#0f172a] mb-6 tracking-tight">
                             Track your journey<br />
                             from beginner to<br />
                             <span className="text-[#5B4BFF]">placement-ready</span>
                         </h1>
 
-                        <p className="text-gray-500 text-lg leading-relaxed mb-8">
+                        <p className="text-gray-500 text-base md:text-lg leading-relaxed mb-8">
                             A structured, milestone-based platform that guides you through 7 carefully crafted stages in your chosen domain. No pressure, just progress.
                         </p>
 
-                        <div className="flex items-center gap-4">
+                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                             <button
                                 onClick={() => navigate('/signup')}
                                 className="inline-flex items-center justify-center px-6 py-3.5 rounded-[8px] font-medium text-white bg-[#5B4BFF] hover:bg-[#4939ff] transition-colors shadow-sm gap-2"
@@ -57,7 +57,7 @@ const Home = () => {
                                 Get Started Free <ArrowRight size={18} />
                             </button>
                             <button
-                                className="inline-flex items-center justify-center px-6 py-3.5 rounded-[8px] font-medium text-gray-700 bg-white border border-[#e2e8f0] hover:bg-gray-50 transition-colors"
+                                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-[8px] font-medium text-gray-700 bg-white border border-[#e2e8f0] hover:bg-gray-50 transition-colors"
                             >
                                 Learn More
                             </button>
@@ -65,7 +65,7 @@ const Home = () => {
                     </div>
 
                     {/* Right Image */}
-                    <div className="flex-1 w-full max-w-lg h-[600px] rounded-[24px] overflow-hidden shadow-2xl shrink-0">
+                    <div className="flex-1 w-full max-w-lg h-auto sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-[24px] overflow-hidden shadow-2xl shrink-0">
                         <img
                             src={libraryImage}
                             alt="Library"
@@ -75,7 +75,7 @@ const Home = () => {
                 </section>
 
                 {/* Features Section */}
-                <section className="bg-white py-24 px-8 border-t border-[#f1f5f9]">
+                <section className="bg-white py-16 md:py-24 px-4 sm:px-8 border-t border-[#f1f5f9]">
                     <div className="max-w-7xl mx-auto text-center">
                         <h2 className="text-3xl font-extrabold text-[#0f172a] mb-4">Everything you need to succeed</h2>
                         <p className="text-gray-500 text-lg mb-16 max-w-2xl mx-auto">
@@ -131,7 +131,7 @@ const Home = () => {
                 </section>
 
                 {/* Domain Section */}
-                <section className="bg-gray-50 py-24 px-8 border-t border-[#f1f5f9]">
+                <section className="bg-gray-50 py-16 md:py-24 px-4 sm:px-8 border-t border-[#f1f5f9]">
                     <div className="max-w-7xl mx-auto text-center">
                         <h2 className="text-3xl font-extrabold text-[#0f172a] mb-4">Choose Your Domain</h2>
                         <p className="text-gray-500 text-lg mb-16 max-w-2xl mx-auto">
@@ -175,7 +175,7 @@ const Home = () => {
                 </section>
 
                 {/* CTA Section */}
-                <section className="bg-white py-24 px-8 text-center border-t border-[#f1f5f9]">
+                <section className="bg-white py-16 md:py-24 px-4 sm:px-8 text-center border-t border-[#f1f5f9]">
                     <h2 className="text-3xl font-extrabold text-[#0f172a] mb-4">Ready to start your journey?</h2>
                     <p className="text-gray-500 text-lg mb-8 max-w-2xl mx-auto">
                         Join hundreds of students already tracking their path to placement success
@@ -190,7 +190,7 @@ const Home = () => {
             </main>
 
             {/* Footer Section */}
-            <footer className="bg-[#0f172a] text-white py-12 px-8 border-t border-[#1e293b]">
+            <footer className="bg-[#0f172a] text-white py-12 px-4 sm:px-8 border-t border-[#1e293b]">
                 <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
                     <div className="flex items-center justify-center gap-2 mb-6">
                         <Rocket className="text-white" size={24} />

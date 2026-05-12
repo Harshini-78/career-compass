@@ -33,23 +33,23 @@ const Login = () => {
     return (
         <div className="min-h-screen bg-[#F8F9FC] flex flex-col font-inter">
             {/* Header */}
-            <header className="flex justify-between items-center px-8 py-5 bg-white border-b border-[#e2e8f0]">
+            <header className="flex justify-between items-center px-4 sm:px-8 py-5 bg-white border-b border-[#e2e8f0]">
                 <div className="flex items-center gap-2">
-                    <Rocket className="text-[#5B4BFF]" size={28} />
-                    <span className="font-extrabold text-2xl text-gray-900 tracking-tight">CareerCompass</span>
+                    <Rocket className="text-[#5B4BFF]" size={24} />
+                    <span className="font-extrabold text-xl sm:text-2xl text-gray-900 tracking-tight">CareerCompass</span>
                 </div>
                 <button
                     onClick={() => navigate('/')}
                     className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
                 >
                     <ArrowLeft size={16} />
-                    Back to Home
+                    <span className="hidden sm:inline">Back to Home</span>
                 </button>
             </header>
 
             {/* Login Section */}
             <main className="flex-1 flex items-center justify-center p-4">
-                <div className="bg-white w-full max-w-[440px] p-8 sm:p-10 rounded-[12px] shadow-[0px_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+                <div className="bg-white w-full max-w-[440px] p-5 sm:p-10 rounded-[12px] shadow-[0px_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col my-8">
 
                     <h2 className="text-[28px] font-bold text-[#0f172a] mb-1 tracking-tight">Welcome Back</h2>
                     <p className="text-gray-500 font-medium text-[15px] mb-8">Continue your journey to placement readiness</p>
