@@ -110,7 +110,17 @@ const Dashboard = () => {
         );
     }
 
-    if (!data) return <div className="p-8 text-red-600 font-medium flex items-center justify-center h-full">{error || 'Something went wrong.'}</div>;
+    if (!data) {
+        if (domains.length === 0 && !error) {
+            return (
+                <div className="p-8 text-center flex flex-col items-center justify-center h-[50vh]">
+                    <h2 className="text-[24px] font-extrabold text-gray-900 dark:text-white mb-2">Roadmaps Not Found</h2>
+                    <p className="text-gray-500 font-medium">The career domains have not been populated in the database yet. If you just deployed, please wait for the setup script to finish or ask an admin to run the population script.</p>
+                </div>
+            );
+        }
+        return <div className="p-8 text-red-600 font-medium flex items-center justify-center h-full">{error || 'Something went wrong.'}</div>;
+    }
 
     // Derived values for dashboard display
     const firstIncompleteStage = data.stages.find(s => !s.completed);
