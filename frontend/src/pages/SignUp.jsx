@@ -26,7 +26,7 @@ const SignUp = () => {
             const username = `${baseUsername}_${Math.floor(Math.random() * 10000)}`;
 
             // Register using the default API
-            await api.post('register/', {
+            await api.post('/register/', {
                 username: username,
                 email: email,
                 password: password,
